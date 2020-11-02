@@ -24,7 +24,7 @@ class ViewController: UIViewController {
             lblOutput.text = ""
             
             // Print out data
-            for i in 0..<qg1904q.count {
+            for i in 0..<school.count {
                 lblOutput.text! += "\(school[i].indexNo) \(school[i].name)\n"
                 
                 // print("\(school[i].name)")

@@ -24,7 +24,6 @@ class ViewController: UIViewController {
     
     @IBAction func onButton(_ sender: Any) {
         showMiracle()
-        print("Aaaaaaaaaaaaaaaaaa")
     }
     
 }

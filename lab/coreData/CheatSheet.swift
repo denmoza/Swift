@@ -92,7 +92,7 @@ func deleteEverything() {
       }
       
       // Method 2
-      for i in 0..<Health.count {
+      for i in 0..<UserStorage.count {
       context.delete(Health[i])
      
       (UIApplication.shared.delegate as? AppDelegate)?.saveContext()

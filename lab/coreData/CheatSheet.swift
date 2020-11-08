@@ -79,7 +79,7 @@ if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentCont
 // DeleteEverything
 func deleteEverything() {
   if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
-   if Health.isEmpty == true {
+   if UserStorage.isEmpty == true {
     print("empty")
    } else {
       // Method 1

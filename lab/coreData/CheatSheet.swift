@@ -48,7 +48,8 @@ import CoreData
 // Create Array Data
 var UserStorage:[User] = []
 
-/* CheckInput - Bool
+/* 
+   CheckInput - Bool
    return True = if user input contains something & is in the right type (string, int, double)
 */
 func checkInput() -> Bool {

@@ -136,4 +136,20 @@ func deleteLast() {
  }
 }
   
+// DeleteSelected
+func deleteSelected() {
+  if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+    let findUser = txtName.text!
+    if findUser == "" {
+      print("textfield is empty")
+    } else if UserStorage.contains(where: { $0.name == "\(findUser)" }){
+      let row = UserStorage.firstIndex(where: {$0.name == "\(findUser)"})!
+      context.delete(UserStorage[row])
+                
+      (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+    } else {
+      print("cant find \(findUser)")
+    }
+   }
+}
 // More to be added soon

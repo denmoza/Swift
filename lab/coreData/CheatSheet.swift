@@ -124,4 +124,16 @@ func search() {
   }
 }
 
+// DeleteLast
+func deleteLast() {
+  if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+   if UserStorage.isEmpty == true {
+     print("is empty")
+   } else {
+     context.delete(UserStorage[UserStorage.count - 1])
+     (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+   }
+ }
+}
+  
 // More to be added soon

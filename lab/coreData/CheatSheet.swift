@@ -100,5 +100,28 @@ func deleteEverything() {
     }
    }    
 }
+  
+// SearchInput
+func search() {
+  if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+    let fetchRequest = NSFetchRequest<Person>(entityName: "User")
+    let searchField = txtSearchName.text!
+            
+    fetchRequest.predicate = NSPredicate(format: "name == %@", searchField)
+            
+    do {
+      UserStorage = try context.fetch(fetchRequest)
+    } catch {
+      print(error)
+    }
+            
+    if UserStorage.count > 0 {
+     lblOutput.text = ""
+     for i in 0..<UserStorage.count {
+     lblOutput.text! += "Results: \(UserStorage[i].name!) \(Health[i].age)\n"
+    }
+   }
+  }
+}
 
 // More to be added soon
